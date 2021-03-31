@@ -1,0 +1,42 @@
+package models
+
+import (
+	"database/sql"
+	"log"
+)
+type (
+	Urls struct {
+		Id_urls      int
+		Id_forms      int
+		Url string
+	}
+)
+
+// Insert detected urls:
+// func InsertDetectedForms(conn *sql.DB, fId int, uri) (int64, error) {
+//     if !PRODMODE {
+//         fmt.Println("TRY UPDATE FormInfo:",f.Id_forms, f.Name, f.Test_uri, f.Live_uri)
+//     }
+//     sql:= "UPDATE urls f SET f.uri=? WHERE f.id_forms=?"
+//     stmt, err := conn.Prepare(sql)
+//     if err != nil {
+//         log.Fatal(err)
+//     }
+
+//     res, err := stmt.Exec(
+//         f.Live_uri, f.Id_forms,
+//     )
+//     if err != nil {
+//         log.Fatal(err)
+//     }
+
+//     affected, err := res.RowsAffected()
+//     if err != nil {
+//         log.Fatal(err)
+//     }
+
+//     if !PRODMODE {
+//         fmt.Println("UPDATED in DB:", affected, "Id_forms:",f.Id_forms, f.Live_uri)
+//     }
+//     return affected, nil
+// }
